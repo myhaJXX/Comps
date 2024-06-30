@@ -22,7 +22,7 @@ function Account({auth, setAuth, liked, setLiked, doCompare, viewed, accPage, bu
     }, [accLiked])
 
     const links = [
-        {title: 'Orders History', icon:faShoppingCart},
+        {title: 'Orders', icon:faShoppingCart},
         {title: 'Featured', icon:faHeart},
         {title: 'Viewed products', icon:faEye},
         {title: 'My reviews', icon:faMessage},
