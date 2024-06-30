@@ -83,7 +83,7 @@ function Catalog({filters, setFilters, compare, setCompare, liked, setLiked, car
   window.addEventListener('resize', ()=>setSize(window.innerWidth))
 
   const [activeLittle, setActiveLittle] = useState(false)
-  useEffect(()=>{
+  useMemo(()=>{
     let cont = document.querySelector(`.${cl.littleParams}`)
     if(activeLittle){
       if(cont) cont.setAttribute('style', 'width: 300px;')
@@ -102,7 +102,7 @@ function Catalog({filters, setFilters, compare, setCompare, liked, setLiked, car
 
           {size > 800 ? <CataAside filters={filters} setFilters={setFilters} lateFilters={lateFilters} setLateFilters={setLateFilters} activeLittle={activeLittle}/>
           :
-          <div className={cl.littleParams}>
+          <div className={cl.littleParams} style={activeLittle ? {width: '300px'} : {width: '20px'}}>
             <button
             className={activeLittle ? cl.activeButton : cl.unActiveButton}
             onClick={()=>setActiveLittle(!activeLittle)}
