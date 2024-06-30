@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Comps/static/css/main.22908cce.css",
-    "main.js": "/Comps/static/js/main.6ee261f1.js",
+    "main.js": "/Comps/static/js/main.d1650298.js",
     "static/media/gameBG.jpg": "/Comps/static/media/gameBG.a53dedbcd6d202377f43.jpg",
     "static/media/mainBG.jpg": "/Comps/static/media/mainBG.6edce5a8345d3eefbb97.jpg",
     "static/media/card2.png": "/Comps/static/media/card2.bb44ab9b16f01a61b170.png",
@@ -17,10 +17,10 @@
     "static/media/GMo.png": "/Comps/static/media/GMo.5f37e177a9c057c447b7.png",
     "index.html": "/Comps/index.html",
     "main.22908cce.css.map": "/Comps/static/css/main.22908cce.css.map",
-    "main.6ee261f1.js.map": "/Comps/static/js/main.6ee261f1.js.map"
+    "main.d1650298.js.map": "/Comps/static/js/main.d1650298.js.map"
   },
   "entrypoints": [
     "static/css/main.22908cce.css",
-    "static/js/main.6ee261f1.js"
+    "static/js/main.d1650298.js"
   ]
 }
