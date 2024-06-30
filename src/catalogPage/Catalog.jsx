@@ -86,7 +86,7 @@ function Catalog({filters, setFilters, compare, setCompare, liked, setLiked, car
   useEffect(()=>{
     let cont = document.querySelector(`.${cl.littleParams}`)
     if(activeLittle){
-      cont.setAttribute('style', 'width: 300px;')
+      if(cont) cont.setAttribute('style', 'width: 300px;')
     } else {
       window.scrollTo({top: 0})
       if(cont)cont.setAttribute('style', 'width: 20px;')
