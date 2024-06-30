@@ -1,0 +1,42 @@
+.cont{
+    display: grid;
+    gap: 20px;
+}
+
+.cont>div:last-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cont p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #727272;
+}
+
+.cont button{
+    height: 40px;
+    width: 150px;
+    border: 3px solid #06A56C;
+    border-radius: 5px;
+    background-color: #06A56C;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.cont button:hover{
+    color: #06A56C;
+    background-color: transparent;
+}
+
+@media(max-width:800px){
+    .cont>div:last-child{
+        grid-template-columns: 1fr;
+    }
+}

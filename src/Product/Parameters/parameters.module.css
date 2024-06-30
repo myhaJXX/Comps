@@ -1,0 +1,165 @@
+.cont{
+    display: grid;
+    gap: 20px;
+    grid-template: 30px 1fr / 65% 1fr;
+}
+
+.card{
+    height: fit-content;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 12px 2px #e4e4e4;
+}
+
+.card>div{
+    display: flex;
+    align-items: center;
+}
+
+.card img{
+    height: 50px;
+}
+
+.price-cont{
+    display: grid;
+}
+
+.price-cont>*{
+    font-family: "Lato", sans-serif;
+}
+
+.price-cont>strike{
+    font-size: 0.875em;
+    font-weight: 400;
+    text-align: left;
+    color: #c4c4c4;
+}
+
+.price-cont>p{
+    padding-left: 20px;
+    font-size: 1.125em;
+    font-weight: 600;
+    color: #E93232;
+}
+
+.hasCont{
+    padding: 5px 10px;
+    background-color: #ececec
+}
+
+.hasCont>div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.hasCont p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #06A56C;
+}
+
+.hasCont .NB+p{
+    color: #c4c4c4;
+}
+
+.WB, .NB{
+    height: 18px;
+    width: 18px;
+}
+
+.NB{
+    border: 2px solid #c4c4c4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.NB::before{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 10px;
+    background-color: #c4c4c4;
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.icon:hover{
+    border-color: #01579B;
+}
+
+.card>button{
+    height: 40px;
+    width: 100%;
+    border: 2px solid #06A56C;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    background-color: #06A56C;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.card>button:hover{
+    color: #06A56C;
+    background-color: transparent;
+}
+
+.cont table{
+    height: 100%;
+    width: 100%;
+    border-spacing: 0;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #727272;
+}
+
+.cont table tr{
+    height: 30px;
+}
+
+.cont table td{
+    padding-left: 10px;
+}
+
+.cont table tr:nth-child(2n + 1){
+    background-color: #ededed;
+}
+
+.cont table+p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+}
+
+@media(max-width: 800px){
+    .cont{
+        grid-template: 1fr / 1fr;
+    }
+
+    .card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}

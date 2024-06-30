@@ -1,0 +1,62 @@
+.cont{
+    justify-self: center;
+    width: 90%;
+    display: grid;
+    column-gap: 5%;
+    justify-content: flex-start;
+    grid-template-columns: 20% 1fr;
+}
+
+.cont>aside{
+    display: grid;
+    align-content: flex-start;
+    gap: 10px;
+}
+
+.link-card{
+    padding-left: 20px;
+    height: 60px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    box-shadow: 0px 0px 12px 2px #e4e4e4;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.link-card:hover{
+    transform: scale(1.05);
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+}
+
+.activeLinkCard{
+    color: #01579B;
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 900px){
+    .link-card{
+        padding-left: 5px;
+        height: 40px;
+        gap: 10px;
+    }
+    .link-card>h4{
+        font-size: 0.75em;
+    }
+    .link-card>svg{
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@media(max-width:800px){
+    .cont{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

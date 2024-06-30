@@ -1,0 +1,129 @@
+.cont{
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.box{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 70px 1fr;
+}
+
+.box>div{
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.box a{
+    font-size: 0.875em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+    text-align: center;
+    color: #01579B;
+    transition: all .2s linear;
+}
+
+.box a:hover{
+    color: #c4c4c4;
+}
+
+.iconAva{
+    justify-self: center;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border: 3px solid #c4c4c4;
+    border-radius: 50%;
+    color: #c4c4c4;
+}
+
+.box article{
+    padding-bottom: 10px;
+    display: grid;
+    align-content: flex-start;
+    gap: 10px;
+    border-bottom: 2px solid #ececec;
+}
+
+.box article>div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.box p{
+    margin-left: auto;
+    font-size: 0.875em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+}
+
+.soc-card{
+    padding: 8px;
+    width: calc(50% - 10px);
+    display: grid;
+    align-items: center;
+    grid-template: repeat(2, 25px) / 30% 70%;
+    box-shadow: 0px 0px 12px 2px #e4e4e4;
+}
+
+.soc-card>h5{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+}
+
+.soc-card>p{
+    width: fit-content;
+    margin-left: 0;
+    font-size: 0.875em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+    color: #01579B;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.soc-card>p:hover{
+    color: #727272;
+}
+
+.cont>button{
+    width: fit-content;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+    color: #01579B;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.cont>button:hover{
+    color: #727272;
+}
+
+@media(max-width: 800px){
+    .box{
+        grid-template-columns: 40px 1fr;
+    }
+    .iconAva{
+        padding: 5px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width:500px){
+    .soc-card>svg{
+        height: 20px;
+        width: 20px;
+    }
+    .soc-card{
+        padding: 5px;
+    }
+    .soc-card>h5, .soc-card>p{
+        font-size: 0.625em;
+    }
+}

@@ -1,0 +1,15 @@
+.cont{
+    display: grid;
+    gap: 10px;
+}
+
+.cont h2{
+    text-align: center;
+    font-size: 4em;
+    color: #01579B;
+}
+
+.cont h4{
+    text-align: center;
+    font-size: 2em;
+}

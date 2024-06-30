@@ -1,0 +1,182 @@
+.cont{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 90%;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.box{
+    max-height: 1750px;
+    display: grid;
+    grid-template: 50px 1fr / 250px 1fr;
+    gap: 20px;
+}
+
+.sortBox{
+    display: flex;
+    justify-content: space-between;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.sortBox>div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.window{
+    padding: 10px;
+    display: grid;
+    row-gap: 20px;
+    /* grid-template: repeat(auto-fill, 370px) / repeat(auto-fill, 250px); */
+    /* grid-template: repeat(auto-fill, 220px) / repeat(auto-fill, 100%); */
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.mark{
+    padding: 10px 5px;
+    height: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.mark>p{
+    font-size: 0.75em;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+}
+
+.mark>div{
+    height: 15px;
+    width: 15px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.mark>div::before{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 8px;
+    background-color: var(--blue);
+    transition: all .4s linear;
+}
+
+.mark:hover div{
+    background-color: var(--blue);
+}
+
+.mark:hover div::before{
+    background-color: #fff;
+}
+
+.tableLink{
+    padding: 7px;
+    height: 25px;
+    width: 25px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.tableLink:hover{
+    transform: scale(1.1);
+}
+
+.littleParams{
+    height: 100%;
+    width: 20px;
+    display: grid;
+    align-content: flex-start;
+    gap: 20px;
+    z-index: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.unActiveButton, .activeButton{
+    top: 30px;
+    position: sticky;
+    height: 20px;
+    width: 20px;
+    border-right: 2px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
+    transition: all .4s linear;
+    z-index: 8;
+}
+
+.unActiveButton{
+    transform: rotateZ(-45deg);
+}
+
+.activeButton{
+    transform: rotateZ(135deg);
+}
+
+@media (max-width: 1080px){
+    .window{
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 800px){
+    .box{
+        grid-template: 50px 40px 1fr / 20px 1fr;
+    }
+
+    .sortBox{
+        justify-content: flex-end;
+    }
+
+    .sortBox>div:nth-child(1){
+        display: none;
+    }
+
+    .window{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+@media(max-width: 500px){
+
+    .box{
+        gap: 5px;
+    }
+
+    .sortBox{
+        justify-content: space-evenly;
+    }
+    
+    .sortBox>div{
+        gap: 5px;
+    }
+
+    .tableLink{
+        padding: 5px;
+        height: 20px;
+        width: 20px;
+        border-width: 2px;
+    }
+
+    .window{
+        align-items: center;
+    }
+}

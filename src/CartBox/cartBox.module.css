@@ -1,0 +1,223 @@
+.cont{
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.box{
+    padding: 20px;
+    height: 70%;
+    width: 70%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.box>h2{
+    text-align: center;
+}
+
+.card{
+    padding: 10px 0px;
+    display: grid;
+    grid-template: 50px 20px / 70px 3fr repeat(2,1fr) 40px;
+    gap: 0px 10px;
+    align-items: center;
+    border-bottom: 2px solid #e4e4e4;
+}
+
+.card>h5{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+    color: #c4c4c4;
+}
+
+.card img{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: auto;
+    width: 70px;
+}
+
+.cardCount{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.cardCount>h4{
+    color: #727272;
+    font-weight: 400;
+}
+
+.cardCount>div{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #e4e4e4;
+    cursor: pointer;
+}
+
+.cardCount>div:nth-child(1)::before{
+    content: " ";
+    position: absolute;
+    height: 2.4px;
+    width: 20px;
+    background-color: var(--blue);
+}
+
+
+.cardCount>div:nth-child(3)::before, .cardCount>div:nth-child(3)::after{
+    content: " ";
+    position: absolute;
+    height: 2.4px;
+    width: 20px;
+    background-color: var(--blue);
+}
+
+.cardCount>div:nth-child(3)::before{
+    transform: rotateZ(90deg);
+}
+
+.cardPrice{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.125em;
+    font-weight: 700;
+    font-family: "Lato", sans-serif; 
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.cardDelete{   
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    color: #E93232;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    cursor: pointer;
+}
+
+.box>button{
+    align-self: center;
+    height: 40px;
+    width: 150px;
+    border: 3px solid #06A56C;
+    border-radius: 5px;
+    background-color: #06A56C;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+    color: #fff;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.box>button:hover{
+    color: #06A56C;
+    background-color: transparent;
+}
+
+@media (max-width:800px){
+    .card{
+        grid-template: 50px 20px / 70px 3fr 60px 1fr 40px;
+    }
+
+    .card>h4{
+        font-size: 1em;
+    }
+
+    .cardPrice{
+        justify-content: center;
+        font-size: 0.875em;
+    }
+
+    .cardCount{
+        gap: 0px;
+        justify-content: space-between;
+    }
+
+    .cardCount>div{
+        height: 20px;
+        width: 20px;
+    }
+
+    .cardCount>div:nth-child(1)::before{
+        height: 1.5px;
+        width: 10px;
+    }
+
+    .cardCount>div:nth-child(3)::before{
+        height: 1.5px;
+        width: 10px;
+    }
+
+    .cardCount>div:nth-child(3)::after{
+        height: 1.5px;
+        width: 10px;
+    }
+
+    .card>svg{
+        height: 20px;
+        width: 20px;
+        color: #E93232;
+    }
+}
+
+@media (max-width: 700px){
+    .box{
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px){
+    .box{
+        width: 100%;
+    }
+
+    .card{
+        grid-template: 30px 20px / 30px 3fr 60px 1fr 40px;
+        gap: 0px 5px;
+    }
+
+    .card>img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .card>h4{
+        font-size: 0.75em;
+    }
+
+    .cardPrice{
+        font-size: 0.625em;
+    }
+}

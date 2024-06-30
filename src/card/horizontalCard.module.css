@@ -1,0 +1,230 @@
+.card{
+    height: 150px;
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2, 20px) 80px / 15% 2fr 1fr;
+    gap: 15px;
+    align-content: center;
+    grid-template-areas: 
+    "img title id"
+    "img rev price"
+    "img info price"
+    ;
+}
+
+.card>h5{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #727272;
+}
+
+.card>img{
+    width: 100%;
+    grid-area: img;
+    cursor: pointer;
+}
+
+.card>h4{
+    grid-area: title;
+}
+
+.info{
+    grid-area: rev;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info>div{
+    display: flex;
+    gap: 10px;
+}
+
+.info p{
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+}
+
+.price-box{
+    grid-area: price;
+    display: grid;
+    grid-template: 20px 30px / repeat(2, 50%);
+    align-content: center;
+}
+
+.card strike{
+    display: flex;
+    align-items: center;
+    font-size: 0.75em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #d5d5d5;
+}
+
+.card button{
+    justify-self: flex-end;
+    align-self: flex-end;
+    height: 90%;
+    width: 100%;
+    border: 3px solid #06A56C;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #06A56C;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.card button:hover{
+    color: #06A56C;
+    background-color: transparent;
+}
+
+.price{
+    grid-row-start: 2;
+}
+
+.priceDiscount{
+    text-align: center;
+    color: #E93232;
+}
+
+.params{
+    width: 60%;
+    display: grid;
+    gap: 5px;
+    align-content: flex-start;
+    h4{
+        font-size: 1em;
+        font-weight: 600;
+    }
+}
+
+.params>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 5px;
+}
+
+.params p{
+    font-size: 0.875em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+}
+
+.icon{
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.icon:hover{
+    border-color: var(--blue);
+}
+
+@media (max-width: 1080px){
+    .card>h4{
+        font-size: 0.875em;
+    }
+
+    .card>h5{
+        font-size: 0.875em;
+    }
+
+    .price-box>h4{
+        font-size: 0.875em;
+    }
+
+    .price-box>button{
+        height: 30px;
+    }
+
+    .params{
+        width: 90%;
+    }
+
+    .params>h4{
+        font-size: 0.875em;
+    }
+}
+
+@media(max-width:500px){
+    .card{
+        height: fit-content;
+        grid-template: repeat(2, 20px) 1fr / 15% 2.5fr 1.5fr;
+        gap: 5px;
+        grid-template-areas: 
+        "img title title"
+        "img rev price"
+        "img info price"
+        ;
+    }
+
+    .card>h5{
+        display: none;
+    }
+
+    .card h4{
+        font-size: 0.7em;
+    }
+
+    .info{
+        gap: 5px;
+    }
+
+    .info div{
+        gap: 5px;
+    }
+
+    .info p{
+        font-size: 0.625em;
+    }
+
+    .info svg{
+        height: 15px;
+        width: 15px;
+    }
+
+    .params>div{
+        gap: 0px;
+    }
+
+    .params p {
+        font-size: 0.625em;
+    }
+
+    .price-box>h4:nth-child(1){
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .price-box h4{
+        font-size: 0.625em;
+    }
+
+
+    .price-box>button{
+        height: 20px;
+        font-size: 0.625em;
+        width: 80%;
+        align-self: center;
+    }
+
+    .price{
+        align-self: flex-start;
+    }
+}

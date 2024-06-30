@@ -1,0 +1,181 @@
+.cont{
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.cont>button{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: calc(50% - 20px);
+    border-left: 3px solid var(--blue);
+    border-bottom: 3px solid var(--blue);
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.buttonNext{
+    right: 40px;
+    transform: rotateZ(-135deg);
+}
+
+.buttonPrev{
+    left: 40px;
+    transform: rotateZ(45deg);
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    transition: all .4s linear;
+}
+
+.card{
+    width: 600px;
+    display: grid;
+    grid-template: 25px 1fr 25px / 70px 1fr 100px;
+    grid-template-areas: 
+    "img name name"
+    "img desc desc"
+    "img stars date"
+    ;
+}
+
+.card>h4{
+    grid-area: name;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    grid-area: img;
+}
+
+.card>p{
+    display: flex;
+    align-items: center;
+    grid-area: desc;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    text-align: justify;
+}
+
+.card>h5{
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    grid-area: date;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    text-align: right;
+    color: #cacaca;
+}
+
+@media (max-width: 1280px){
+    .box{
+        justify-content: space-evenly;
+    }
+    .card{
+        width: 500px;
+    }
+}
+
+@media (max-width: 1280px){
+    .card{
+        width: 400px;
+    }
+
+    .card>p{
+        font-size: 0.75em;
+    }
+
+    .card>h5{
+        font-size: 0.875em;
+    }
+}
+
+@media (max-width: 800px){
+    .box{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .card{
+        width: 500px;
+    }
+
+    .card>p{
+        font-size: 1em;
+    }
+
+    .card>h5{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 500px){
+    .cont{
+        grid-template-columns: 100%;
+    }
+    .card{
+        width: 70%;
+        grid-template: 25px 1fr 25px / 40px 1fr 100px;
+        grid-template-areas: 
+        "img name name"
+        "img desc desc"
+        "img stars date"
+        ;
+    }
+
+    .icon{
+        padding: 5px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .card>p{
+        font-size: 0.625em;
+    }
+
+    .card>h5{
+        font-size: 0.875em;
+    }
+}
+
+@media (max-width: 400px){
+    .card{
+        grid-template: 25px 1fr 25px / 40px 0.7fr 40px;
+        grid-template-areas: 
+        "img name name"
+        "img desc desc"
+        "img stars date"
+        ;
+    }
+
+    .card>h4{
+        font-size: 0.875em;
+    }
+
+    .card>h5{
+        font-size: 0.5em;
+    }
+
+    .card>div>svg{
+        height: 15px;
+        width: 15px;
+    }
+
+    .card>div{
+        gap: 0px;
+    }
+}

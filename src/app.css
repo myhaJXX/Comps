@@ -1,0 +1,82 @@
+:root{
+    --blue:#060F42;
+    --white: #e4e4e4;
+    --orange: #FFCD1B;
+    --red: #E93232;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: text;
+}
+
+header{
+    display: grid;
+    grid-template: 40px 100px / 100%;
+    align-items: center;
+}
+
+main{
+    display: grid;
+    gap: 40px;
+    align-content: flex-start;
+}
+
+a{
+    text-decoration: none;
+}
+
+div{
+    cursor: default;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* h */
+
+h2{
+    font-size: 1.75em;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+}
+
+h4{
+    font-size: 1.125em;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+}
+
+h6{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif; 
+}
+
+.App{
+    display: grid;
+    gap: 30px;
+}
+
+@media (max-width:800px){
+    header{
+        grid-template: 40px / 100%;
+        background-color: var(--blue);
+    }
+}
+
+@media (max-width:500px){
+    h2{
+        text-align: center;
+    }
+}

@@ -1,0 +1,30 @@
+.cont{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 90%;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:1080px){
+    .box{
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        row-gap: 30px;
+        justify-items: center;
+    }
+}
+
+@media (max-width:500px){
+    .box{
+        grid-template: repeat(4, 1fr) / 90%;
+        justify-content: center;
+    }
+}
+

@@ -1,0 +1,134 @@
+.cont{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(114, 114, 114, 0.7);
+    z-index: 900;
+}
+
+.box{
+    padding: 10px;
+    height: 370px;
+    width: 50%;
+    background-color: #fff;
+    z-index: 5;
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.box>div:nth-child(1){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.close{
+    height: 30px;
+    width: 30px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.close::before, .close::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #E93232;
+}
+
+.close::before{
+    transform: rotateZ(45deg);
+}
+
+.close::after{
+    transform: rotateZ(-45deg);
+}
+
+.close:hover{
+    border-color: #E93232;
+}
+
+.stars{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.star, .activeStar{
+    height: 20px;
+    width: 20px;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.star{
+    color: #c4c4c4;
+}
+
+.activeStar{
+    color: #FFCD1B;
+}
+
+.box input{
+    justify-self: center;
+    padding-left: 10px;
+    height: 40px;
+    width: 100%;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    transition: all .4s linear;
+}
+
+.box button{
+    justify-self: center;
+    width: fit-content;
+    padding: 10px 20px;
+    border: 2px solid #06A56C;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    background-color: #06A56C;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.box button:hover{
+    color: #06A56C;
+    background-color: transparent;
+}
+
+@media (max-width: 500px){
+    .box{
+        height: 220px;
+        gap: 5px;
+    }
+    .box input{
+        height: 20px;
+        font-size: 0.5em;
+    }
+
+    .box button{
+        padding: 5px;
+        border-radius: 2px;
+        font-size: 0.625em;
+    }
+}

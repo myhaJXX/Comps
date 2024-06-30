@@ -1,0 +1,31 @@
+.card{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 3;
+    position: relative;
+    transition: all .4s linear;
+}
+
+.card:hover{
+    background-color: #000;
+}
+
+.card>h4{
+    top: 0;
+    position: absolute;
+    line-height: 10px;
+    letter-spacing: 5px;
+    text-align: center;
+    mix-blend-mode: exclusion;
+    color: #fff;
+    z-index: 4;
+}
+
+.card>img{
+    width: 100%;
+}

@@ -1,0 +1,156 @@
+.card{
+    padding: 10px;
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    box-shadow: 0px 0px 12px 2px #e5e5e5;
+}
+
+.avatar{
+    height: 40px;
+    width: 40px;
+}
+
+.info-box{
+    display: grid;
+    gap: 10px;
+}
+
+.NB{
+    height: 18px;
+    width: 18px;
+    border: 2px solid #E93232;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.NB::before, .NB::after{
+    content: " ";
+    position: absolute;
+    height: 1.5px;
+    width: 10px;
+    background-color: #E93232;
+}
+
+.NB::before{
+    transform: rotateZ(45deg);
+}
+
+.NB::after{
+    transform: rotateZ(-45deg);
+}
+
+.info-box p{
+    font-size: 1.0625em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+}
+
+.topInfo{
+    display: flex;
+    gap: 20px;
+    align-items:center
+}
+
+.topInfo>div{
+    display: flex;
+}
+
+.star{
+    height: 12px;
+    width: 12px;
+}
+
+.topInfo>h5{
+    margin-left: auto;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #c3c3c3;
+}
+
+.info-box h5{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    text-align: justify;
+    color: #c3c3c3;
+}
+
+.info-box>h5{
+    font-size: 0.9375em;
+    color: #727272;
+}
+
+.infoMark{
+    display: grid;
+    align-content: flex-start;
+}
+
+.infoMark>h4{
+    font-size: 0.875em;
+}
+
+.infoMark>p{
+    font-size: 0.9375em;
+    color: #727272;
+}
+
+.icon{
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.icon:hover{
+    border-color: #01579B;
+}
+
+.check{
+    height: 18px;
+    width: 18px;
+}
+
+@media(max-width:800px){
+
+    .topInfo{
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .topInfo>h4{
+        width: 100%;
+        font-size: 0.75em;
+    }
+
+    .topInfo p{
+        font-size: 0.625em;
+    }
+
+    .check{
+        height: 15px;
+        width: 15px;
+    }
+
+    .NB{
+        height: 15px;
+        width: 15px;
+        border-width: 1px;
+    }
+
+    .NB::after{
+        height: 2px;
+        width: 9px;
+    }
+
+    .NB::before{
+        height: 2px;
+        width: 9px;
+    }
+}

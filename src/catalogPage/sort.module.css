@@ -1,0 +1,51 @@
+.cont{
+    align-self: center;
+    height: 40px;
+    width: 200px;
+    position: relative;
+    z-index: 6;
+}
+
+.box{
+    top: 0;
+    height: 40px;
+    width: 100%;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(6, 40px) / 100%;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    background-color: #fff;
+    transition: all .4s linear;
+}
+
+.box>option, .box>p{
+    padding-left: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.box>option:hover{
+    background-color: var(--white);
+}
+
+@media(max-width:500px){
+    .cont{
+        height: 40px;
+    }
+
+    .box{
+        height: 40px;
+        grid-template: repeat(6, 40px) / 100%;
+    }
+
+}

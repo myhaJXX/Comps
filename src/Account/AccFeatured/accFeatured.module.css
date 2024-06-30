@@ -1,0 +1,10 @@
+.cont{
+    padding-right: 10px;
+    max-height: 600px;
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: 10px;
+    align-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

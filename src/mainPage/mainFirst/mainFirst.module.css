@@ -1,0 +1,272 @@
+.cont{
+    display: grid;
+    gap: 30px;
+    grid-template: 700px / calc(25% - 15px) calc(65% - 15px);
+    justify-content: center;
+}
+
+.cont>aside{
+    display: grid;
+    grid-template: repeat(10, 1fr) / 100%;
+}
+
+.card{
+    padding: 0px 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.card sup{
+    font-size: 0.625em;
+    font-weight: 800;
+    color: #F44336;
+}
+
+.card:hover{
+    background-color: var(--white);
+}
+
+.card::after{
+    right: 15px;
+    content: " ";
+    height: 10px;
+    width: 10px;
+    border-bottom: 3px solid var(--blue);
+    border-right: 3px solid var(--blue);
+    position: absolute;
+    transform: rotateZ(-45deg);
+}
+
+.slider-cont{
+    display: grid;
+    grid-template: 65% 25% / repeat(7, 1fr);
+    column-gap: 2%;
+    align-content: space-between;
+}
+
+.slider-box{
+    grid-column-start: 1;
+    grid-column-end: 8;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    transition: all .4s linear;
+}
+    /* wtf */
+.slider-box>img{
+    top: -10%;
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: all .4s linear;
+}
+
+.slider-buttons{
+    bottom: 20px;
+    align-self: center;
+    position: absolute;
+    display: flex;
+    gap: 10px;
+}
+
+.slider-buttons>button{
+    height: 4px;
+    width: 30px;
+    background-image: linear-gradient(to right, var(--white) 0% 50%, #6b6b6b 50% 100%);
+    background-size: 200% 100%;
+}
+
+.slider-buttons>button:nth-child(1){
+    animation: button1 12s linear infinite;
+}
+
+.slider-buttons>button:nth-child(2){
+    animation: button2 12s linear infinite;
+}
+
+.slider-buttons>button:nth-child(3){
+    animation: button3 12s linear infinite;
+}
+
+.slider-buttons>button:nth-child(4){
+    animation: button4 12s linear infinite;
+}
+
+.card-info{
+    display: grid;
+    grid-template: 2fr 1fr / 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+@keyframes button1{
+    0%{
+        background-position-x: 0%;
+    }
+    25%{
+        background-position-x: -100%;
+    }
+    25.1%{
+        background-position-x: 0%;
+    }
+}
+
+@keyframes button2{
+    25%{
+        background-position-x: 0%;
+    }
+    50%{
+        background-position-x: -100%;
+    }
+    50.1%{
+        background-position-x: 0%;
+    }
+}
+
+@keyframes button3{
+    50%{
+        background-position-x: 0%;
+    }
+    75%{
+        background-position-x: -100%;
+    }
+    75.1%{
+        background-position-x: 0%;
+    }
+}
+
+@keyframes button4{
+    75%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: -100%;
+    }
+
+    0%{
+        background-position-x: 0%;
+    }
+}
+
+@media (max-width: 1280px){
+    .cont{
+        grid-template: 600px / calc(25% - 15px) calc(65% - 15px);
+    }
+}
+
+@media (max-width: 1080px){
+    .cont{
+        grid-template: 500px / calc(25% - 15px) calc(65% - 15px);
+    }
+
+    .card-info>svg{
+        height: 30px;
+        width: 30px;
+    }
+
+    .card-info>h4{
+        font-size: 15px;
+    }
+
+    .card-info>h4{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 800px){
+    .cont{
+        grid-template: 1fr 500px / 90%;
+    }
+
+    .cont>aside{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 10px;
+        row-gap: 20px;
+    }
+
+    .card{
+        width: 180px;
+        gap: 5px;
+    }
+
+    .card-info>h4{
+        max-width: 110px;
+        font-size: 0.8em;
+    }
+
+    .card-info>svg{
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 500px){
+    .cont{
+        grid-template: 1fr 350px / 90%;
+    }
+
+    .card>h4{
+        font-size: 0.75em;
+    }
+
+    .card-info>h4{
+        max-width: 110px;
+        font-size: 0.625em;
+    }
+
+    .card-info>svg{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 400px){
+    .cont{
+        grid-template: 1fr 350px / 90%;
+    }
+
+    .cont>aside{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .slider-cont{
+        grid-template: 50% repeat(2, 20%) / repeat(3, 1fr);
+        gap: 5%;
+    }
+
+    .slider-box{
+        grid-column-end: 4;
+    }
+
+    .card{
+        padding: 10px 0px;
+        min-width: 180px;
+    }
+
+    .card-info>svg{
+        height: 27px;
+        width: 27px;
+    }
+
+    .card-info{
+        height: 100%;
+        width: 100%;
+    }
+
+    .card-info:last-child{
+        display: none;
+    }
+}

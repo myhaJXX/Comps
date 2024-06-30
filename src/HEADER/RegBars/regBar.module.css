@@ -1,0 +1,234 @@
+.cont{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 999;
+}
+
+.box{
+    padding: 20px;
+    height: fit-content;
+    width: 25%;
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+    background-color: #fff;
+}
+
+.box h5{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #EA4335;
+}
+
+.box input, .regBox input{
+    padding-left: 20px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #727272;
+}
+
+.box>input, .regBox>input{
+    height: 40px;
+    width: 100%;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.box>div, .regBox>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close{
+    height: 25px;
+    width: 25px;
+    border: 2px solid #EA4335;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.close:hover{
+    border-color: transparent;
+}
+
+.close::before, .close::after{
+    content: " ";
+    height: 2px;
+    width: 15px;
+    position: absolute;
+    background-color: #EA4335;
+}
+
+.close::before{
+    transform: rotateZ(45deg);
+}
+
+.close::after{
+    transform: rotateZ(-45deg);
+}
+
+.inputPass{
+    height: 40px;
+    width: 100%;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.inputPass>input{
+    height: 100%;
+    width: 80%;
+}
+
+.inputPass>div{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box a, .regBox a{
+    justify-self: flex-end;
+    width: fit-content;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #01579B;
+    transition: all .4s linear;
+}
+
+.box>a::before, .regBox>a::before{
+    background-color: #01579B;
+}
+
+.box>button, .regBox>button{
+    height: 40px;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    border: 2px solid #01579B;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #01579B;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.box>button:hover, .regBox>button:hover{
+    background-color: transparent;
+    color: #01579B;
+}
+
+.box>div:nth-child(6), .regBox>div:nth-child(6){
+    justify-content: center;
+}
+
+.del{
+    height: 3px;
+    background-color: #c4c4c4;
+    display: flex;
+    position: relative;
+}
+
+.del>p{
+    justify-self: center;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #727272;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.del>hr{
+    position: absolute;
+}
+
+.brands-cont{
+    display: flex;
+}
+
+.brands-cont>button{
+    height: 40px;
+    width: 40%;
+    border: 3px solid;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.brands-cont>button:nth-child(1){
+    border-color: #EA4335;
+    background-color: #EA4335;
+}
+
+.brands-cont>button:nth-child(1):hover{
+    color: #EA4335;
+    background-color: transparent;
+}
+
+.brands-cont>button:nth-child(2){
+    border-color: #01579B;
+    background-color: #01579B;
+}
+
+.brands-cont>button:nth-child(2):hover{
+    color: #01579B;
+    background-color: transparent;
+}
+
+.boxBottomLinks>p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+}
+
+.boxBottomLinks>a{
+    color: #01579B;
+}
+
+.boxBottomLinks>a::before{
+    background-color: #01579B;
+}
+
+.regBox{
+    padding: 20px;
+    height: 90%;
+    width: 25%;
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+    background-color: #fff;
+}
+
+@media (max-width: 800px){
+    .box, .regBox{
+        width: 80%;
+    }
+
+    .brands-cont>button{
+        gap: 5px;
+    }
+}
