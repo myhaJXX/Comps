@@ -2,7 +2,6 @@ import React from 'react'
 import PayCard from '../../Paypage/PayCard'
 
 function AccBuy({buy}) {
-    console.log(buy)
   return (
     <section style={{maxHeight: '500px', overflowY: 'scroll'}}>
         {buy.map((e,i)=>{

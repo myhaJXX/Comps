@@ -31,6 +31,10 @@ function ProductPage({compare, setCompare, viewed, setViewed, liked, setLiked, c
 
     const [link, setLink] = useState('Information')
 
+    useEffect(()=>{
+      window.scrollTo({top: 0})
+    }, [link])
+
     let [reviews, setReviews] = useState([...itemRevs[params.id]])
     let [len, setLen] = useState(itemRevs[info.id].length)
 
